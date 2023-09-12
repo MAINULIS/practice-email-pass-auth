@@ -9,8 +9,8 @@ const Header = () => {
 
             <div className='flex items-center justify-between'>
                 {/* company name */}
-                <div className='text-green-600 ml-10 tracking-wide font-semibold  text-xl'>
-                    <Link >Practice</Link>
+                <div className='text-neutral-700 ml-10 tracking-wide font-bold  text-xl'>
+                    <Link >Practice Email Pass Auth</Link>
                 </div>
 
                 {/* nav items */}
@@ -49,7 +49,7 @@ const Header = () => {
                                     {/* company name */}
                                     <div className='flex items-center justify-between mb-4'>
                                         <div>
-                                            <Link ><span className='text-xl tracking-wide font-semibold text-green-600 '>Practice</span></Link>
+                                            <Link ><span className='text-xl tracking-wide font-semibold text-neutral-700 '>Practice</span></Link>
                                         </div>
                                         {/* drop down close btn */}
                                         <div>
