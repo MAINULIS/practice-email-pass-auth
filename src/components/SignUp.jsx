@@ -79,7 +79,7 @@ const updateUserData = (user, name) =>{
 
     return (
         <div className='my-container text-center lg:text-start'>
-            <h2 className='my-8 text-3xl font-bold text-neutral-700 text-center'>Please Sign Up</h2>
+            <h2 className='my-8 text-3xl font-bold text-zinc-700 text-center'>Please Sign Up</h2>
             <div className='grid grid-cols-1 lg:flex gap-4'>
                 <div >
                     <form onSubmit={handleSubmit} className='mt-12 py-4 ' >
