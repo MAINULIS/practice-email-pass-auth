@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth";
 import app from '../firebase/firebase.config';
 import Lottie from 'lottie-react';
-import signUp from '../assets/signIn.json'
 import { Link } from 'react-router-dom';
+import signUp from '../assets/signUp.json'
 
 const auth = getAuth(app);
 const SignUp = () => {
@@ -40,8 +40,8 @@ const SignUp = () => {
         // create email-password auth using firebase auth
         createUserWithEmailAndPassword(auth, email, password)
         .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
+            const newUser = result.user;
+            console.log(newUser)
             setError('');
             event.target.reset();
             setSuccess('User has been successfully sign in')
@@ -99,7 +99,7 @@ const updateUserData = (user, name) =>{
                     </form>
                 </div>
                 <div className='w-full lg:w-4/5 lg:ml-auto h-3/5 sm:h-96 mt-12 p-8' >
-                    <Lottie animationData={signUp} loop={true} ></Lottie>
+                   <Lottie animationData={signUp} loop={true}></Lottie>
                 </div>
             </div>
         </div>
