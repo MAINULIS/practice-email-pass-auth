@@ -3,6 +3,7 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerifi
 import app from '../firebase/firebase.config';
 import Lottie from 'lottie-react';
 import signUp from '../assets/signIn.json'
+import { Link } from 'react-router-dom';
 
 const auth = getAuth(app);
 const SignUp = () => {
@@ -94,6 +95,7 @@ const updateUserData = (user, name) =>{
                         <p className='text-red-700'>{error}</p>
                         <p className='text-green-700'>{success}</p>
                         <input type="submit" value="Sign Up" className=' items-center border rounded font-medium bg-fuchsia-500 hover:bg-fuchsia-400 px-4 py-1 mt-5' />
+                        <p className='text-zinc-600'><small>Already have an account? please </small> <Link  className='text-blue-600 underline' to="/login">Login</Link></p>
                     </form>
                 </div>
                 <div className='w-full lg:w-4/5 lg:ml-auto h-3/5 sm:h-96 mt-12 p-8' >
