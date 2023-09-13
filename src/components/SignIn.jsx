@@ -5,11 +5,15 @@ import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import login from '../assets/signIn.json'
 import SocialLogin from './SocialLogin';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEyeSlash } from '@fortawesome/free-regular-svg-icons';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 const auth = getAuth(app);
 const SignIn = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [control, setControl] = useState(false)
     const emailRef = useRef();
 
 
@@ -69,7 +73,17 @@ const SignIn = () => {
                             <input className='border border-gray-500 px-2 w-96 mb-2' type="email" ref={emailRef} name="email" id="email" placeholder='Your Email' required />
                         </label> <br />
                         <label htmlFor="password"> <span className=' text-indigo-600 font-medium  text-xl'>Password</span> <br />
-                            <input className='border border-gray-500 px-2 w-96 mb-2' type="password" name="password" id="password" placeholder='Password' required />
+                        {
+                            control ?
+                            <div>
+                                  <input  className='border border-gray-500 px-2 w-96 mb-2' type="text" name="password" id="password" placeholder='Password' required />
+                            <FontAwesomeIcon onClick={()=>setControl(!control)} className='-ms-7' icon={faEyeSlash} />
+                            </div> :
+                            <div>
+                                  <input  className='border border-gray-500 px-2 w-96 mb-2' type="password" name="password" id="password" placeholder='Password' required />
+                            <FontAwesomeIcon onClick={()=>setControl(!control)} className='-ms-7' icon={faEye} />
+                            </div>
+                          }
                         </label> <br />
                         <p className='text-red-700'>{error}</p>
                         <p className='text-green-700'>{success}</p>
