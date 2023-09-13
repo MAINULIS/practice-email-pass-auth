@@ -4,6 +4,7 @@ import app from '../firebase/firebase.config';
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import login from '../assets/signIn.json'
+import SocialLogin from './SocialLogin';
 
 const auth = getAuth(app);
 const SignIn = () => {
@@ -80,6 +81,9 @@ const SignIn = () => {
               <div className='w-full lg:w-4/5 lg:ml-auto h-3/5 sm:h-96 mt-12 p-8' >
                     <Lottie animationData={login} loop={true} ></Lottie>
                 </div>
+           </div>
+           <div>
+            <SocialLogin></SocialLogin>
            </div>
         </div>
     );

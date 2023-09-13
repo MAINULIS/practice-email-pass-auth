@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth";
 import app from '../firebase/firebase.config';
-import Lottie from 'lottie-react';
 import { Link } from 'react-router-dom';
-import signUp from '../assets/signUp.json'
 
 const auth = getAuth(app);
 const SignUp = () => {
@@ -98,8 +96,8 @@ const updateUserData = (user, name) =>{
                         <p className='text-zinc-600'><small>Already have an account? please </small> <Link  className='text-blue-600 underline' to="/login">Login</Link></p>
                     </form>
                 </div>
-                <div className='w-full lg:w-4/5 lg:ml-auto h-3/5 sm:h-96 mt-12 p-8' >
-                   <Lottie animationData={signUp} loop={true}></Lottie>
+                <div className='w-full lg:w-4/5 lg:ml-auto h-3/5 sm:h-96  p-12' >
+                   <img src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7875.jpg?w=740&t=st=1694519719~exp=1694520319~hmac=0a74d6cfb9564294b96ee5fcf3b4927f360a4f77939dfdac94fe53dba3599643" alt="" />
                 </div>
             </div>
         </div>
