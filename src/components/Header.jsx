@@ -77,7 +77,7 @@ const Header = () => {
                                                 className={({ isActive }) => (isActive ? 'active' : 'default')}
                                             >Sign Up</NavLink>
                                         </li>
-                                        <Link to="/"> <img className="w-10 h-10 rounded-full" src="/public/avatar.jpeg" alt="Rounded avatar" /></Link>
+                                        <Link to="/"> <img className="w-10 h-10 rounded-full" src="/avatar.jpeg" alt="Rounded avatar" /></Link>
                                     </ul>
                                 </nav>
                                 </div>

@@ -48,7 +48,7 @@ const SignUp = () => {
                 console.log(newUser)
                 setError('');
                 event.target.reset();
-                setSuccess('User has been successfully sign in')
+                setSuccess('User has been successfully sign up')
                 emailForVerification(result.user);
                 updateUserData(result.user, name);
             })
@@ -89,10 +89,10 @@ const SignUp = () => {
                 <div >
                     <form onSubmit={handleSubmit} className='mt-12 py-4 ' >
                         <label htmlFor="Name "><span className=' text-indigo-600 font-medium  text-xl'>Name </span><br />
-                            <input className='border border-gray-500 px-2 w-96 mb-2' type="text" name="name" id="name" placeholder='Your full Name' required />
+                            <input className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="text" name="name" id="name" placeholder='Your full Name' required />
                         </label> <br />
                         <label htmlFor="Email"> <span className=' text-indigo-600 font-medium  text-xl'>Email</span> <br />
-                            <input className='border border-gray-500 px-2 w-96 mb-2' type="email" name="email" id="email" placeholder='Your Email' required />
+                            <input className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="email" name="email" id="email" placeholder='Your Email' required />
                         </label> <br />
 
                         <label htmlFor="password"> <span className=' text-indigo-600 font-medium  text-xl'>Password</span> <br />
@@ -100,11 +100,11 @@ const SignUp = () => {
                           {
                             control ?
                             <div>
-                                  <input  className='border border-gray-500 px-2 w-96 mb-2' type="text" name="password" id="password" placeholder='Password' required />
+                                  <input  className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="text" name="password" id="password" placeholder='Password' required />
                             <FontAwesomeIcon onClick={()=>setControl(!control)} className='-ms-7' icon={faEyeSlash} />
                             </div> :
                             <div>
-                                  <input  className='border border-gray-500 px-2 w-96 mb-2' type="password" name="password" id="password" placeholder='Password' required />
+                                  <input  className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="password" name="password" id="password" placeholder='Password' required />
                             <FontAwesomeIcon onClick={()=>setControl(!control)} className='-ms-7' icon={faEye} />
                             </div>
                           }

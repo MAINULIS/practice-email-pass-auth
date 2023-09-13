@@ -67,20 +67,20 @@ const SignIn = () => {
               <div>
               <form onSubmit={handleLogin} className='mt-12 py-4 ' >
                         <label htmlFor="Name "><span className=' text-indigo-600 font-medium  text-xl'>Name </span><br />
-                            <input className='border border-gray-500 px-2 w-96 mb-2' type="text" name="name" id="name" placeholder='Your full Name' />
+                            <input className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="text" name="name" id="name" placeholder='Your full Name' />
                         </label> <br />
                         <label htmlFor="Email"> <span className=' text-indigo-600 font-medium  text-xl'>Email</span> <br />
-                            <input className='border border-gray-500 px-2 w-96 mb-2' type="email" ref={emailRef} name="email" id="email" placeholder='Your Email' required />
+                            <input className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="email" ref={emailRef} name="email" id="email" placeholder='Your Email' required />
                         </label> <br />
                         <label htmlFor="password"> <span className=' text-indigo-600 font-medium  text-xl'>Password</span> <br />
                         {
                             control ?
                             <div>
-                                  <input  className='border border-gray-500 px-2 w-96 mb-2' type="text" name="password" id="password" placeholder='Password' required />
+                                  <input  className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="text" name="password" id="password" placeholder='Password' required />
                             <FontAwesomeIcon onClick={()=>setControl(!control)} className='-ms-7' icon={faEyeSlash} />
                             </div> :
                             <div>
-                                  <input  className='border border-gray-500 px-2 w-96 mb-2' type="password" name="password" id="password" placeholder='Password' required />
+                                  <input  className='border border-gray-500 px-2 w-72 lg:w-96 mb-2' type="password" name="password" id="password" placeholder='Password' required />
                             <FontAwesomeIcon onClick={()=>setControl(!control)} className='-ms-7' icon={faEye} />
                             </div>
                           }
