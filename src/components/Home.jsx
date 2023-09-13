@@ -2,8 +2,9 @@ import React from 'react';
 
 const Home = () => {
     return ( 
-        <div className='text-red-700 text-3xl'>
-            this is home
+        <div className=' my-container text-xl text-gray-600 lg:text-3xl '>
+            Firebase email-password, Google and Github authentication practice site. <br />
+            <span className='text-pink-600 font-semibold'>Please check it out.</span>
         </div>
     );
 };
